@@ -20,7 +20,7 @@ def is_passing (score):
 
 def average (scores):
     if len(scores) == 0:
-        return ValueError("Scores Lists Can Not Be Empty")
+        raise ValueError("Scores Lists Can Not Be Empty")
     return round(sum(scores) / len(scores), 2)
 
 def curved_score(score, bonus):
