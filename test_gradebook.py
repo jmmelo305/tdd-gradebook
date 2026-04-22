@@ -1,6 +1,7 @@
 import pytest
-from gradebook import letter_grade, is_passing, average
+from gradebook import letter_grade, is_passing, average, curved_score
 
+# Letter_grade tests
 def test_letter_grade_A ():
     assert letter_grade(95) == "A"
 
@@ -15,6 +16,7 @@ def test_letter_grade_invalid_type():
     with pytest.raises(TypeError):
         letter_grade("hello")
 
+# Is_passing tests
 def test_is_passing_true():
     assert is_passing(75) == True 
 
@@ -25,6 +27,7 @@ def test_is_passing_invalid_type():
     with pytest.raises(TypeError):
         is_passing("passing")
 
+# Average tests
 def test_average_works():
     assert average([80, 90, 70]) == 80.0
 
@@ -39,3 +42,7 @@ def test_average_not_a_list():
 def test_average_bad_items():
     with pytest.raises(TypeError):
         average([80, "ninety", 70])
+
+# Curved Score Tests
+def test_curved_score_basic():
+    assert curved_score(80, 5) == 85.0
