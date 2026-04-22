@@ -31,3 +31,7 @@ def test_average_works():
 def test_average_empty_list():
     with pytest.raises(ValueError):
         average([])
+
+def test_average_not_a_list():
+    with pytest.raises(TypeError):
+        average("not a list")
