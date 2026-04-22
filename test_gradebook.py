@@ -1,5 +1,5 @@
 import pytest
-from gradebook import letter_grade, is_passing
+from gradebook import letter_grade, is_passing, average
 
 def test_letter_grade_A ():
     assert letter_grade(95) == "A"
@@ -24,3 +24,6 @@ def test_is_passing_false():
 def test_is_passing_invalid_type():
     with pytest.raises(TypeError):
         is_passing("passing")
+
+def test_average_works():
+    assert average([80, 90, 70])
