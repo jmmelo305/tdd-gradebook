@@ -14,7 +14,7 @@ def letter_grade (score):
         return "F"
 
 def is_passing (score):
-    return True
+    return score >= 60 
 
 def average (scores):
     pass
